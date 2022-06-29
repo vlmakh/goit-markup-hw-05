@@ -13,7 +13,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />  
+    
   </head>
 
   <body>
@@ -60,7 +61,7 @@
           ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
           ДЛЯ ВАШЕГО БИЗНЕСА
         </h1>
-        <button type="button" class="button button-order">
+        <button type="button" class="button button-order" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -127,9 +128,18 @@
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <div class="whatwedo-images">
-            <img src="./images/what1.jpg" alt="Чем мы занимаемся" width="370" />
-            <img src="./images/what2.jpg" alt="Чем мы занимаемся" width="370" />
-            <img src="./images/what3.jpg" alt="Чем мы занимаемся" width="370" />
+            <div class="whatwedo-thumb">
+              <img src="./images/what1.jpg" alt="Чем мы занимаемся" width="370" />
+              <p class="whatwedo-label">Десктопные приложения</p>
+            </div>
+            <div class="whatwedo-thumb">
+              <img src="./images/what2.jpg" alt="Чем мы занимаемся" width="370" />
+              <p class="whatwedo-label">Мобильные приложения</p>
+            </div>
+            <div class="whatwedo-thumb">
+              <img src="./images/what3.jpg" alt="Чем мы занимаемся" width="370" />
+              <p class="whatwedo-label">Дизайнерские решения</p>
+            </div>
           </div>
         </div>
       </section>
@@ -343,6 +353,18 @@
       </section>
     </main>
 
+    <!-- Модальное окно - Заказать услугу -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-order ">
+        <button type="button" class="button-close" data-modal-close>
+          <svg class="icon">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>  
+        </button>
+                
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-add">
@@ -399,5 +421,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
